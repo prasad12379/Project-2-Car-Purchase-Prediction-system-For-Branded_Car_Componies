@@ -21,7 +21,7 @@ classifire=KNeighborsClassifier(n_neighbors=5 , metric="minkowski" , p=2)
 classifire.fit(x_train , y_train)
 
 y_pred=classifire.predict(x_test)
-#print(np.concatenate((y_test.reshape(len(y_test) , 1) ,y_pred.reshape(len(y_pred) , 1)) , 1))
+print(np.concatenate((y_test.reshape(len(y_test) , 1) ,y_pred.reshape(len(y_pred) , 1)) , 1))
 
 from sklearn.metrics import confusion_matrix , accuracy_score
 cm=confusion_matrix(y_test , y_pred)
